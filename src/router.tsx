@@ -1,7 +1,9 @@
 import {createBrowserRouter, Navigate} from "react-router-dom";
 
 import {MainLayout} from "./layouts";
-import {UsersPage, PostsPage, UserDetailsPage} from "./pages";
+import {UsersPage, PostsPage, UserDetailsPage, PostDetailsPage} from "./pages";
+import {Comments} from "./components/CommentsContainer";
+
 
 
 
@@ -21,7 +23,11 @@ const router = createBrowserRouter([
             },
             {
                 path: 'posts', element:<PostsPage/>
+            },
+            {
+                path: 'posts/:id', element: <PostDetailsPage/>
             }
+
         ]
     }
 ]);
