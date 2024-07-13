@@ -25,10 +25,18 @@ const PaginationComponent: FC<IProps> = () => {
             return next
         })
     }
+    const dis = () => {
+        if (page<1) {
+            return true
+        }else {
+            return false
+        }
+        }
+
 
     return (
         <div>
-                <button onClick={prev} disabled={!prev}>Prev page</button>
+                <button onClick={prev} disabled={dis()}>Prev page</button>
                 <div>{page}</div>
                 <button onClick={next} disabled={!next}>Next page</button>
             </div>
