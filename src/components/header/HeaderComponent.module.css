@@ -1,0 +1,16 @@
+.header {
+    background: #f1f156;
+}
+.header> ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.part {
+    text-decoration: none;
+    color: #642449;
+    font-size: 20px;
+}
+.header > ul> li {
+    list-style-type: none;
+}
