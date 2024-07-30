@@ -12,8 +12,8 @@ const AuthFormComponent = () => {
         register
     } = useForm<TokenObtainPairModel>({
         defaultValues: {
-            username: 'userSZ234',
-            password: 'P@$$word1',
+            username: 'Olena',
+            password: 'Pa$word1',
         }
     });
     let authenticate = (data: TokenObtainPairModel) => {
