@@ -1,23 +1,15 @@
-.Header {
+.header {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
-    background-color: #6666cc;
-    height: 50px;
+    color: #eaea65;
 }
-
-.Header a {
+.header a {
     text-decoration: none;
-    color: #f6e7e7;
+    color: #5c9dd3;
     font-size: 25px;
 }
-
-.Header a:hover {
-    text-decoration: underline;
-    color: #dcdc67;
-
-}
-
-.Header a[class='active'] {
-    color: #e05e5e;
+a:hover {
+    color: #77dcc1;
 }

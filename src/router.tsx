@@ -1,35 +1,25 @@
 import {createBrowserRouter, Navigate} from "react-router-dom";
 
-import {MainLayout} from "./layouts";
-import {UsersPage, PostsPage, UserDetailsPage, PostDetailsPage} from "./pages";
-import {Comments} from "./components/CommentsContainer";
-
-
-
+import MainLayout from "./layouts/Mainlayout";
+import {PostsPage} from "./pages/PostsPage";
+import {UsersPage} from "./pages/UsersPage";
 
 const router = createBrowserRouter([
     {
-        path: '', element: <MainLayout/>, children: [
+        path:'', element: <MainLayout/>, children: [
             {
-                index: true, element:<Navigate to={'users'}/>
-            },
-            {
-                path: 'users', element:<UsersPage/>, children: [
-
-                    {
-                        path: ':id', element: <UserDetailsPage/>
-                    }
-                ]
-            },
-            {
-                path: 'posts', element:<PostsPage/>
-            },
-            {
-                path: 'posts/:id', element: <PostDetailsPage/>
-            }
-
-        ]
+                index: true, element: <Navigate to={'users'}/>
+    },
+    {
+        path: 'users', element: <UsersPage/>
+    },
+    {
+        path: 'posts', element: <PostsPage/>
     }
-]);
+]
+}
+])
 
-export {router}
+export {
+    router
+}

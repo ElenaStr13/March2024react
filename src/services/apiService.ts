@@ -1,8 +1,23 @@
-import axios from "axios";
+import axios from 'axios';
+import {baseURL, urls} from "../constants";
+import {IPost, IUser} from "../interfaces";
 
-import {baseURL} from "../constants";
+const axiosInstance = axios.create({
+    baseURL: baseURL,
+    headers: {}
+});
 
 
-const apiService = axios.create({baseURL});
+export const userService = {
+    getAll: async () => {
+        const response = await axiosInstance.get<IUser[]>(urls.users.base);
+        return response.data;
+    }
+}
 
-export {apiService}
+export const postService = {
+    getAll: async () => {
+        let response = await axiosInstance.get<IPost[]>(urls.posts.base);
+        return response.data;
+    }
+}
