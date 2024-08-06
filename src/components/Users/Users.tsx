@@ -1,18 +1,19 @@
 import React, {useEffect} from 'react';
 import {useAppDispatch, useAppSelector} from "../../redux";
 
-import {userActions} from "../../redux/slices/userSlice";
+import {userAction} from "../../redux/slices/userSlice";
 import {User} from "./User";
 
 
 const Users = () => {
 
-    let {userSlice: {users,isLoaded}} = useAppSelector(state => state);
+     let {userSlice: {users,isLoaded}} = useAppSelector(state => state);
+
 
     let dispatch = useAppDispatch();
 
     useEffect(() => {
-        dispatch(userActions.loadUsers());
+        dispatch(userAction.loadUsers());
     }, []);
 
 

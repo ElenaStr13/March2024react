@@ -3,6 +3,8 @@ import {createBrowserRouter, Navigate} from "react-router-dom";
 import MainLayout from "./layouts/Mainlayout";
 import {PostsPage} from "./pages/PostsPage";
 import {UsersPage} from "./pages/UsersPage";
+import {UserPage} from "./pages/UserPage";
+import {PostPage} from "./pages/PostPage";
 
 const router = createBrowserRouter([
     {
@@ -13,9 +15,15 @@ const router = createBrowserRouter([
     {
         path: 'users', element: <UsersPage/>
     },
+            {
+                path: 'users/:id', element: <UserPage/>
+            },
     {
         path: 'posts', element: <PostsPage/>
-    }
+    },
+            {
+                path: 'posts/:id', element: <PostPage/>
+            }
 ]
 }
 ])
